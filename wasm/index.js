@@ -1,5 +1,9 @@
 import { keygen, build } from "./gobl.js";
 
+window.gobl = {};
+window.gobl.keygen = keygen;
+window.gobl.build = build;
+
 const result = await keygen();
 console.log(`RESULT: ${result}`);
 
