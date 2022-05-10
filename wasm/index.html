@@ -1,11 +1,25 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <script type="module" src="index.js"></script>
-</head>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
+  </head>
 
-<body>
-</body>
-
+  <body class="min-h-screen min-w-screen">
+    <div class="h-1/6">
+      <h2>Key</h2>
+      <textarea class="w-100 min-w-full h-20" id="key"></textarea>
+    </div>
+    <div class="flex min-h-full h-96">
+      <div class="flex-1 min-h-full">
+        <h2>Input File</h2>
+        <textarea autofocus id="input-file" class="h-100 w-100 min-h-full min-w-full"> </textarea>
+        <button type="submit">Submit</button>
+      </div>
+      <div class="flex-1 min-h-full">
+        <h2>Output File</h2>
+        <textarea autofocus id="output-file" class="h-100 w-100 min-h-full min-w-full"> </textarea>
+      </div>
+    </div>
+  </body>
 </html>
