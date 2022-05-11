@@ -39,39 +39,34 @@ exampleInputs.noSchema = `{
 
 const exampleData = exampleInputs.simpleMessage;
 
-const loadKey = async () => {
+const generateAndDisplayKey = async () => {
     const key = await keygen();
     goblData.key = JSON.parse(key);
-    document.getElementById("key").innerHTML = key;
+    document.getElementById("key").value = key;
 }
 
-const displayExample = async () => {
-    document.getElementById("input-file").innerHTML = exampleData;
+const displayExampleInputFile = async () => {
+    document.getElementById("input-file").value = exampleData;
 }
 
-const processInput = async () => {
-    const inputFile = document.getElementById("input-file").innerHTML;
-    // console.log(inputFile)
-    // const inputJSON = JSON.parse(inputFile);
-    // const lol = {
-    //     data: inputJSON,
-    //     privatekey: goblData.key,
-    //     sigs: []
-    // }
-    console.log(JSON.parse(exampleData))
-    console.log(goblData.key.public)
-    // debugger;
-    const lol = {
-        data: JSON.parse(exampleData),
+const processInputFile = async () => {
+    const inputFile = document.getElementById("input-file").value;
+
+    const buildData = {
+        data: JSON.parse(inputFile),
         privatekey: goblData.key.private
     }
-    const buildResult = await build(lol);
+    const buildResult = await build(buildData);
 
-    document.getElementById("output-file").innerHTML = buildResult;
+    document.getElementById("output-file").value = buildResult;
 }
 
-loadKey().then(() => {
-    displayExample();
-    processInput();
-});
+(async function loadExample() {
+    await generateAndDisplayKey();
+    await displayExampleInputFile();
+    await processInputFile();
+})()
 
+document.getElementById("input-file").oninput = function updateOnInputFileChange () {
+    processInputFile();
+};
