@@ -13,29 +13,6 @@ const generateAndDisplayKey = async () => {
   document.getElementById("key").value = key;
 };
 
-// putting in the initial example is hard coded on the index page now
-
-// const exampleInputs = {};
-// exampleInputs.simpleMessage = `{
-//     "doc": {
-//         "$schema": "https://gobl.org/draft-0/note/message",
-//         "title": "Test Message",
-//         "content": "test content"
-//     }
-// }`;
-// exampleInputs.noSchema = `{
-//     "doc": {
-//         "title": "Test Message",
-//         "content": "test content"
-//     }
-// }`;
-
-// const exampleData = exampleInputs.simpleMessage;
-
-// const displayExampleInputFile = async () => {
-//     document.getElementById("input-file").value = exampleData;
-// }
-
 const processInputFile = async () => {
   const inputFile = document.getElementById("input-file").value;
 
@@ -54,12 +31,12 @@ const processInputFile = async () => {
   }
 };
 
-const markSuccess = (el) => {
+const displaySuccess = (el) => {
   el.classList.remove("bg-red-200");
   el.classList.add("bg-green-200");
 };
 
-const markError = (el) => {
+const displayError = (el) => {
   el.classList.add("bg-red-200");
   el.classList.remove("bg-green-200");
 };
@@ -68,18 +45,18 @@ const updateStatus = async (type, message) => {
   const statusEl = document.getElementById("status");
   if (type === "success") {
     statusEl.innerHTML = "Success!";
-    markSuccess(statusEl);
+    displaySuccess(statusEl);
   } else {
     // error case
     statusEl.innerHTML = `Error: ${message}`;
-    markError(statusEl);
+    displayError(statusEl);
   }
 };
 
 await generateAndDisplayKey();
-// await displayExampleInputFile();
 await processInputFile();
 
+// process the input file on each keystroke
 document.getElementById("input-file").oninput =
   function updateOnInputFileChange() {
     processInputFile();
