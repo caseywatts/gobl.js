@@ -6,7 +6,8 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:cypress/recommended"
+        "plugin:cypress/recommended",
+        "prettier"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
