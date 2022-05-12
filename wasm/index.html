@@ -9,17 +9,18 @@
     <h1 class="text-xl text-center text-white">GOBL.js</h1>
     <div class="h-1/6 m-4">
       <h2 class="text-lg p-2 bg-slate-50 rounded-t-xl border border-b-0 border-slate-300">Auto-generated Keys</h2>
-      <textarea readonly class="w-100 min-w-full h-32 bg-slate-200 border border-slate-300" id="key"></textarea>
+      <textarea readonly class="w-100 min-w-full h-24 bg-slate-200 border border-slate-300" id="key"></textarea>
     </div>
-    <div class="flex flex-wrap min-h-full h-96">
-      <div class="flex-1 min-h-full m-4">
+    <div class="flex flex-wrap">
+      <div class="flex-1 p-4">
         <h2 class="text-lg p-2 bg-slate-50 rounded-t-xl border border-b-0 border-slate-300">Input File</h2>
-        <textarea autofocus id="input-file" class="h-100 w-100 min-h-full min-w-full border border-slate-300"> </textarea>
+        <textarea id="input-file" class="w-100 h-96 min-w-full border border-slate-300"> </textarea>
       </div>
-      <div class="flex-1 min-h-full m-4">
+      <div class="flex-1 p-4">
         <h2 class="text-lg p-2 bg-slate-50 rounded-t-xl border border-b-0 border-slate-300">Output File</h2>
-        <textarea id="output-file" class="h-100 w-100 min-h-full min-w-full border border-slate-300"> </textarea>
+        <textarea id="output-file" class="w-100 h-96 min-w-full border border-slate-300"> </textarea>
       </div>
     </div>
+    <div id="status" class="mx-4 my-0 rounded-xl p-4 text-center bg-green-200">Success!</div>
   </body>
 </html>

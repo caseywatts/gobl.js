@@ -47,6 +47,30 @@ const processInputFile = async () => {
 }
 
 
+const markSuccess = (el) => {
+    el.classList.remove("bg-red-200")
+    el.classList.add("bg-green-200")
+}
+
+const markError = (el) => {
+    el.classList.add("bg-red-200")
+    el.classList.remove("bg-green-200")
+}
+
+const updateStatus = async (type, message) => {
+    const statusEl = document.getElementById("status");
+    if (type === "success") {
+        statusEl.innerHTML = "Success!"
+        markSuccess(statusEl)
+    } else { // error case
+        statusEl.innerHTML = `Error: ${message}`
+        markError(statusEl)
+    }
+}
+
+updateStatus("error", "errormsg")
+
+
 await generateAndDisplayKey();
 await displayExampleInputFile();
 await processInputFile();
