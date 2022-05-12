@@ -67,7 +67,7 @@ npm start
 
 * Prettier, to auto-format files (reads the project `.prettierrc.json` file) [list of editor plugins](https://prettier.io/docs/en/editors.html)
 * ESLint, to auto-format files (reads the project `.eslintrc.json` file) [list of editor plugins](https://eslint.org/docs/user-guide/integrations#editors)
-* MarkdownLint, to call out common markdown mistakes. [list of editor plugins](https://github.com/DavidAnson/markdownlint#related)
+* MarkdownLint, to call out common markdown mistakes (reads the project `.markdownlint.json`). [list of editor plugins](https://github.com/DavidAnson/markdownlint#related)
 
 ## Notes
 
