@@ -24,6 +24,8 @@
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
+import "@cypress-audit/lighthouse/commands";
+
 // paste from https://gist.github.com/nickytonline/bcdef8ef00211b0faf7c7c0e7777aaf6
 // note: this triggers two events from typing space then backspace
 

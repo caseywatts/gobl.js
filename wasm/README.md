@@ -21,7 +21,7 @@ To start the local server via browser-sync, including hot reloading (no browser 
 npm run dev
 ```
 
-To start the interactive cyprus.io browser test runner. This runs against whichever server you have running (development build or production build):
+To start the interactive cyprus.io browser test runner. You must have a server running (`npm run dev` or `npm run start` for prod). This interactive UI runs tests against whichever server you have running. (Note: the Lighthouse performance tests will fail against the development server, because performance is much slower there.):
 
 ```bash
 npm run test
