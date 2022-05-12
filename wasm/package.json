@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "build": "./build.sh",
-    "start": "http-server .",
+    "start": "http-server . -p 8080",
     "dev": "browser-sync start . -s --files '*.html, *.css, *.js'",
     "test": "./node_modules/.bin/cypress open",
-    "ci": "npm run check-formatting && npm start & node_modules/.bin/wait-on http://localhost:8080 && cypress run",
+    "ci": "npm run check-formatting && npm start & node_modules/.bin/wait-on http://127.0.0.1:8080 && cypress run",
     "check-formatting": "node_modules/.bin/markdownlint *.md && node_modules/.bin/eslint *.js cypress/**/*.js --no-error-on-unmatched-pattern"
   },
   "keywords": [],
