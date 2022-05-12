@@ -8,7 +8,7 @@
     "start": "http-server .",
     "dev": "browser-sync start . -s --files '*.html, *.css, *.js'",
     "test": "./node_modules/.bin/cypress open",
-    "ci": "npm start & node_modules/.bin/wait-on http://localhost:8080 & cypress run",
+    "ci": "npm run check-formatting & npm start & node_modules/.bin/wait-on http://localhost:8080 & cypress run",
     "check-formatting": "npm run prettier & npm run eslint",
     "prettier": "prettier --check '*.js'",
     "eslint": "node_modules/.bin/eslint *.js cypress/**/*.js --no-error-on-unmatched-pattern"
