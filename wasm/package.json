@@ -8,14 +8,20 @@
     "start": "http-server .",
     "dev": "browser-sync start . -s --files '*.html, *.css, *.js'",
     "test": "./node_modules/.bin/cypress open",
-    "ci": "npm start & node_modules/.bin/wait-on http://localhost:8080 & cypress run"
+    "ci": "npm start & node_modules/.bin/wait-on http://localhost:8080 & cypress run",
+    "check-formatting": "npm run prettier & npm run eslint",
+    "prettier": "prettier --check '*.js'",
+    "eslint": "node_modules/.bin/eslint *.js cypress/**/*.js --no-error-on-unmatched-pattern"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.9",
-    "cypress": "^9.6.1"
+    "cypress": "^9.6.1",
+    "eslint": "^8.15.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.6.2"
   },
   "dependencies": {
     "http-server": "^14.1.0"
