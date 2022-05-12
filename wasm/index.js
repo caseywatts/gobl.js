@@ -41,9 +41,15 @@ const processInputFile = async () => {
         data: JSON.parse(inputFile),
         privatekey: goblData.key.private
     }
-    const buildResult = await build(buildData);
 
-    document.getElementById("output-file").value = buildResult;
+    try { 
+        const buildResult = await build(buildData);
+        document.getElementById("output-file").value = buildResult;
+        updateStatus("success");
+    } catch (e) {
+        document.getElementById("output-file").value = "";
+        updateStatus("error", e);
+    }
 }
 
 
@@ -67,9 +73,6 @@ const updateStatus = async (type, message) => {
         markError(statusEl)
     }
 }
-
-updateStatus("error", "errormsg")
-
 
 await generateAndDisplayKey();
 await displayExampleInputFile();
