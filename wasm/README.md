@@ -62,12 +62,14 @@ npm start
 | Running prettier rules as part of eslint | [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) |
 | For CI, wait for the server to start before running tests | [wait-on](https://github.com/jeffbski/wait-on) |
 | Keeping performance/accessibility in check via Lighthouse | [cypress-audit](https://mfrachet.github.io/cypress-audit/) which uses [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) |
+| CSS Library | [Tailwind CSS](https://tailwindcss.com/) |
 
 ## Recommended Text Editor Extensions
 
 * Prettier, to auto-format files (reads the project `.prettierrc.json` file) [list of editor plugins](https://prettier.io/docs/en/editors.html)
 * ESLint, to auto-format files (reads the project `.eslintrc.json` file) [list of editor plugins](https://eslint.org/docs/user-guide/integrations#editors)
 * MarkdownLint, to call out common markdown mistakes (reads the project `.markdownlint.json`). [list of editor plugins](https://github.com/DavidAnson/markdownlint#related)
+* A [Tailwind CSS editor plugin](https://tailwindcss.com/docs/editor-setup), to do css class autocompletion from this library.
 
 ## Notes
 
