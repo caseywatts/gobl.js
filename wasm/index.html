@@ -5,19 +5,20 @@
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio"></script>
   </head>
 
-  <body class="min-h-screen min-w-screen">
-    <div class="h-1/6">
-      <h2>Key</h2>
-      <textarea class="w-100 min-w-full h-20" id="key"></textarea>
+  <body class="min-h-screen min-w-screen m-4 bg-slate-100">
+    <h1 class="text-xl text-center">GOBL.js</h1>
+    <div class="h-1/6 m-4">
+      <h2 class="text-lg p-2">Auto-generated Keys</h2>
+      <textarea readonly class="w-100 min-w-full h-20 bg-slate-200" id="key"></textarea>
     </div>
-    <div class="flex min-h-full h-96">
-      <div class="flex-1 min-h-full">
-        <h2>Input File</h2>
+    <div class="flex flex-wrap min-h-full h-96">
+      <div class="flex-1 min-h-full m-4">
+        <h2 class="text-lg p-2">Input File</h2>
         <textarea autofocus id="input-file" class="h-100 w-100 min-h-full min-w-full"> </textarea>
       </div>
-      <div class="flex-1 min-h-full">
-        <h2>Output File</h2>
-        <textarea autofocus id="output-file" class="h-100 w-100 min-h-full min-w-full"> </textarea>
+      <div class="flex-1 min-h-full m-4">
+        <h2 class="text-lg p-2">Output File</h2>
+        <textarea id="output-file" class="h-100 w-100 min-h-full min-w-full"> </textarea>
       </div>
     </div>
   </body>
