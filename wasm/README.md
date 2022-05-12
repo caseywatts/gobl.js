@@ -71,3 +71,4 @@ npm start
 ## Notes
 
 * We're using tailwindcss via a CDN for now to try it out. If we decide to stick with it, we should add it in via a css build tool (like postcss) instead of using the CDN directly.
+* For now everything (dev, prod, testing) uses port 8080. If/when that gets in the way of anything, we can set it up to use a different port for dev/testing vs prod.
