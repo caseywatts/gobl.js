@@ -8,8 +8,8 @@
     "start": "http-server .",
     "dev": "browser-sync start . -s --files '*.html, *.css, *.js'",
     "test": "./node_modules/.bin/cypress open",
-    "ci": "npm run check-formatting & npm start & node_modules/.bin/wait-on http://localhost:8080 & cypress run",
-    "check-formatting": "node_modules/.bin/eslint *.js cypress/**/*.js --no-error-on-unmatched-pattern"
+    "ci": "npm run check-formatting && npm start & node_modules/.bin/wait-on http://localhost:8080 && cypress run",
+    "check-formatting": "node_modules/.bin/markdownlint *.md && node_modules/.bin/eslint *.js cypress/**/*.js --no-error-on-unmatched-pattern"
   },
   "keywords": [],
   "author": "",
@@ -21,9 +21,11 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-cypress": "^2.12.1",
     "eslint-plugin-prettier": "^4.0.0",
+    "markdownlint-cli": "^0.31.1",
     "prettier": "^2.6.2"
   },
   "dependencies": {
-    "http-server": "^14.1.0"
+    "http-server": "^14.1.0",
+    "wait-on": "^6.0.1"
   }
 }

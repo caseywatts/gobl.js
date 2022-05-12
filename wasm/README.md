@@ -60,11 +60,13 @@ npm start
 | Standardized Code Formatting (indentation, etc) | [Prettier](https://prettier.io/) |
 | Getting eslint and prettier to play well together (avoiding conflicting rules) | [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) |
 | Running prettier rules as part of eslint | [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) |
+| For CI, wait for the server to start before running tests | [wait-on](https://github.com/jeffbski/wait-on) |
 
 ## Recommended Text Editor Extensions
 
 * Prettier, to auto-format files (reads the project `.prettierrc.json` file)
 * ESLint, to auto-format files (reads the project `.eslintrc.json` file)
+* MarkdownLint, to call out common markdown mistakes.
 
 ## Notes
 
