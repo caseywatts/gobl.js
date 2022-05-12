@@ -1,7 +1,7 @@
-context('Inputs', () => {
+context("Inputs", () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000')
-  })
+    cy.visit("http://localhost:3000");
+  });
 
   describe("Valid Input", () => {
     beforeEach(() => {
@@ -11,16 +11,16 @@ context('Inputs', () => {
             "title": "Test Message",
             "content": "test content"
         }
-      }`)
-      cy.wait(2000) // build is async, it needs some time
-    })
-    it('displays success', () => {
+      }`);
+      cy.wait(2000); // build is async, it needs some time
+    });
+    it("displays success", () => {
       cy.get("#status").contains("Success");
-    })
-    it('shows a built file', () => {
-      cy.get("#output-file").invoke("val").should("contain", "schema")
-    })
-  })
+    });
+    it("shows a built file", () => {
+      cy.get("#output-file").invoke("val").should("contain", "schema");
+    });
+  });
 
   describe("Invalid Input", () => {
     beforeEach(() => {
@@ -30,14 +30,14 @@ context('Inputs', () => {
             "title": "Test Message",
             "content": "test content"
         }
-      }`)
-      cy.wait(2000) // build is async, it needs some time
-    })
-    it('displays an error', () => {
+      }`);
+      cy.wait(2000); // build is async, it needs some time
+    });
+    it("displays an error", () => {
       cy.get("#status").contains("Error");
-    })
-    it('shows no built file', () => {
-      cy.get("#output-file").invoke("val").should("be.empty")
-    })
-  })
-})
+    });
+    it("shows no built file", () => {
+      cy.get("#output-file").invoke("val").should("be.empty");
+    });
+  });
+});

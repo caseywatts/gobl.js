@@ -7,7 +7,7 @@
     "extends": [
         "eslint:recommended",
         "plugin:cypress/recommended",
-        "prettier"
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -16,8 +16,5 @@
     "rules": {
         "no-unused-vars": "warn",
         "cypress/no-unnecessary-waiting": "warn"
-    },
-    "plugins": [
-        "cypress"
-    ]
+    }
 }
