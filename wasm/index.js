@@ -7,30 +7,31 @@ window.gobl.build = build;
 
 let goblData = {};
 
-const exampleInputs = {};
-exampleInputs.simpleMessage = `{
-    "doc": { 
-        "$schema": "https://gobl.org/draft-0/note/message",
-        "title": "Test Message",
-        "content": "test content"
-    }
-}`;
-exampleInputs.noSchema = `{
-    "doc": { 
-        "title": "Test Message",
-        "content": "test content"
-    }
-}`;
-
-const exampleData = exampleInputs.simpleMessage;
-
 const generateAndDisplayKey = async () => {
   const key = await keygen();
   goblData.key = JSON.parse(key);
   document.getElementById("key").value = key;
 };
 
-// this is hard coded on the index page now
+// putting in the initial example is hard coded on the index page now
+
+// const exampleInputs = {};
+// exampleInputs.simpleMessage = `{
+//     "doc": {
+//         "$schema": "https://gobl.org/draft-0/note/message",
+//         "title": "Test Message",
+//         "content": "test content"
+//     }
+// }`;
+// exampleInputs.noSchema = `{
+//     "doc": {
+//         "title": "Test Message",
+//         "content": "test content"
+//     }
+// }`;
+
+// const exampleData = exampleInputs.simpleMessage;
+
 // const displayExampleInputFile = async () => {
 //     document.getElementById("input-file").value = exampleData;
 // }
