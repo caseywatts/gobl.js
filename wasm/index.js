@@ -46,11 +46,10 @@ const processInputFile = async () => {
     document.getElementById("output-file").value = buildResult;
 }
 
-(async function loadExample() {
-    await generateAndDisplayKey();
-    await displayExampleInputFile();
-    await processInputFile();
-})()
+
+await generateAndDisplayKey();
+await displayExampleInputFile();
+await processInputFile();
 
 document.getElementById("input-file").oninput = function updateOnInputFileChange () {
     processInputFile();
