@@ -61,6 +61,7 @@ npm start
 | Getting eslint and prettier to play well together (avoiding conflicting rules) | [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) |
 | Running prettier rules as part of eslint | [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) |
 | For CI, wait for the server to start before running tests | [wait-on](https://github.com/jeffbski/wait-on) |
+| Keeping performance/accessibility in check via Lighthouse | [cypress-audit](https://mfrachet.github.io/cypress-audit/) which uses [lighthouse-ci](https://github.com/GoogleChrome/lighthouse-ci) |
 
 ## Recommended Text Editor Extensions
 
