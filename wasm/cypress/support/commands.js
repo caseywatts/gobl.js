@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+
+// paste from https://gist.github.com/nickytonline/bcdef8ef00211b0faf7c7c0e7777aaf6
+// note: this triggers two events from typing space then backspace
+const paste = (subject, text) => {
+  subject[0].value = text
+  return cy.get(subject).type(' {backspace}') // the use of type to type a space and delete it after changing the value ensures that change detection kicks in
+}
+
+Cypress.Commands.add(
+  'paste',
+  {prevSubject: 'element'},
+  paste
+)

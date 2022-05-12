@@ -75,7 +75,7 @@ const updateStatus = async (type, message) => {
 }
 
 await generateAndDisplayKey();
-await displayExampleInputFile();
+// await displayExampleInputFile();
 await processInputFile();
 
 document.getElementById("input-file").oninput = function updateOnInputFileChange () {
